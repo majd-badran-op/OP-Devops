@@ -1,0 +1,7 @@
+{
+    "auto-rename-tag.activationOnLanguage": [
+
+        "*"
+    ],
+    "liveServer.settings.port": 5501
+}
