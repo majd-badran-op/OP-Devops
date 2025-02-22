@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/to_do_section/list_items.css">
+    <link rel="stylesheet" href="/styles/to_do_section/to_do_section.css">
+    <link rel="stylesheet" href="/styles/nav.css">
+    <link rel="stylesheet" href="/styles/new.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <script type="module" src="/java_script/onlode.js"></script>
+    <script type="module" src="/java_script/ItemList.js">
+        window.ItemList = ItemList;
+    </script>
+    <script type="module" src="/java_script/AddItem.js"></script>
+    <script src="https://kit.fontawesome.com/fb890c72a7.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="nav_container" class="nav_container">
+        <div class="update">
+            <h1>To Do App</h1>
+        </div>
+        <ul class="nav">
+            <li class="nav_item">
+                <a onclick="show()" href="#">
+                    <div class="icon_div">
+                        <i class="fa-solid fa-plus icon"></i>
+                        New
+                    </div>
+                </a>
+            </li>
+            <li class="nav_item"><a onclick="updateUI()" id="all" href="#">All</a></li>
+            <li class="nav_item"><a onclick="get_pending()" href="#">Pending</a></li>
+            <li class="nav_item"><a onclick="get_completed()" href="#">Completed</a></li>
+        </ul>
+    </div>
+
+<section id="to_do_section" class="to_do_section">
+    <h1 class="to_do_placeholder" id="to_do_placeholder"></h1>
+    <div id="update" class="update">
+    </div>
+    <div id="list" class="list">
+    </div>
+</section>
+    <div id="new" class="new cancel">
+        <div><input id="new_title" class="new_title" type="text" placeholder="Enter Title"> </div>
+        <div><textarea id="description" class="description" type="text" placeholder="Enter Description"></textarea></div>
+       <div class="button_div_new">
+            <a class="" onclick="add()">
+                <div class="icon_div new_button">
+                    <i class="fa-solid fa-plus icon"></i>
+                    Add
+                </div>
+            </a>
+            <button class="cancel_button" onclick="cancel()">cancel</button>
+        </div>
+    </div>
+    <div id="update_div" class="button_div_new cancel new">
+        <div><input id="update_title" class="new_title" type="text" placeholder="Enter Title"> </div>
+        <div><textarea id="update_description" class="description" type="text" placeholder="Enter Description"></textarea></div>
+        <div class="button_div_new">
+            <a  class="" onclick="update_data()">
+                <div class="icon_div new_button">
+                    <i class="fa-solid fa-plus icon"></i>
+                    Add
+                </div>
+            </a>
+            <button class="cancel_button" onclick="cancel_update()">Cancel</button>
+        </div>
+    </div>
+</body>
+</html>
